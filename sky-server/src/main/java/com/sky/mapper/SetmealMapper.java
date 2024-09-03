@@ -29,6 +29,13 @@ public interface SetmealMapper {
     void insert(Setmeal setmeal);
 
     /**
+     * 修改套餐
+     * @param setmeal
+     */
+    @AutoFill(OperationType.UPDATE)
+    void update(Setmeal setmeal);
+
+    /**
      * 分页查询
      * @param setmealPageQueryDTO
      * @return
