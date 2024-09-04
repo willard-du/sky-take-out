@@ -11,3 +11,7 @@ sky:
     access-key-secret: zRmUji857J7xpfbygIN72a5IXoZakJ
     bucket-name: sky-ddv
     endpoint: oss-cn-beijing.aliyuncs.com
+  redis:
+    host: localhost
+    port: 6379
+    database: 1
