@@ -7,6 +7,10 @@ import com.sky.entity.ShoppingCart;
 import java.util.List;
 
 public interface ShoppingCartService {
+    /**
+     * 添加购物车
+     * @param shoppingCartDTO
+     */
     void add(ShoppingCartDTO shoppingCartDTO);
 
 
@@ -20,4 +24,10 @@ public interface ShoppingCartService {
      * 清空购物车
      */
     void cleanShoppingCart();
+
+    /**
+     * 从购物车中删除商品
+     * @param shoppingCartDTO
+     */
+    void sub(ShoppingCartDTO shoppingCartDTO);
 }
