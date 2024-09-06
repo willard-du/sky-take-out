@@ -23,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @Slf4j
@@ -191,6 +192,26 @@ public class DishServiceImpl implements DishService {
         }
 
         return dishVOList;
+    }
+
+    /**
+     * 修改菜品状态
+     * @param status
+     * @param id
+     */
+    public void startOrStop(Integer status, Long id) {
+        Dish dish = new Dish();
+        dish.setId(id);
+        dish.setStatus(status);
+        dishMapper.update(dish);
+
+//        if (Objects.equals(status, StatusConstant.ENABLE)){
+//
+//
+//        } else if (Objects.equals(status, StatusConstant.DISABLE)){
+//            dish.setStatus(StatusConstant.ENABLE);
+//            dishMapper.update(dish);
+//        }
     }
 
 
